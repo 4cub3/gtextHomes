@@ -1,10 +1,10 @@
 import {useEffect} from 'react';
-import "./app.css";
 import NavBar from "./components/NavBar/NavBar";
 import {Routes, Route, useMatch, useNavigate} from 'react-router-dom';
 import Home from "./pages/Home";
 import Footer from "./components/Footer/Footer";
 import About from './pages/About';
+import "./app.css";
 
 function App() {
 
