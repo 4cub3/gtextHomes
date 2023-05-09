@@ -13,7 +13,7 @@ const OurProperties: React.FC<OurPropertiesProps> = ({}) => {
     <section className="mt-32 featured">
       <Container>
         <div className="flex w-full">
-          <Title className="ml-auto w-[40rem]">Our Properties</Title>
+          <Title className="ml-auto w-[40rem] max-w-[25rem] xs:max-w-[40rem]">Our Properties</Title>
         </div>
       </Container>
       <div className="w-full overflow-x-scroll px-10 mb-20">

@@ -7,13 +7,13 @@ import ParagraphText from "../../shared/ParagraphText";
 
 const AboutWhyNot: React.FC = () => {
   return (
-    <section className="mt-80 px-10">
+    <section className="mt-40  px-10">
       <Container>
-        <div className="items-center md:flex gap-60">
-          <div>
+        <div className="items-center flex flex-col md:flex-row gap-20">
+          <div className="order-1 md:-order-1">
             <SplitImage image={image} />
           </div>
-          <article className="space-y-20 mt-20">
+          <article className="space-y-20">
             <HeadText>Why Not Gtext</HeadText>
             <ParagraphText>
               Times and seasons come and go, but we stay strong in adding

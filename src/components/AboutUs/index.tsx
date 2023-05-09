@@ -7,7 +7,7 @@ import image from "../../assets/galleryImages/etienne-beauregard-riverin-B0aCvAV
 
 const AboutUs: React.FC = () => {
   return (
-    <section className="mt-32 px-10 overflow-hidden">
+    <section className="mt-32 md:mt-80 px-10 overflow-hidden">
       <Container>
         <div className="md:flex items-center gap-40 my-20 space-y-20 md:space-y-0">
           <article>
