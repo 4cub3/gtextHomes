@@ -13,7 +13,7 @@ const AboutWhyNot: React.FC = () => {
           <div>
             <SplitImage image={image} />
           </div>
-          <article>
+          <article className="space-y-20 mt-20">
             <HeadText>Why Not Gtext</HeadText>
             <ParagraphText>
               Times and seasons come and go, but we stay strong in adding

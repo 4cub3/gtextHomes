@@ -14,8 +14,8 @@ const OurIdentity: React.FC = () => {
           <Title>Our Identity</Title>
         </div>
         <div className="mt-40 flex items-center justify-center">
-          <div className="grid grid-cols-1 gap-20 sm:grid-cols-2 md:grid-cols-3">
-            <div className=" relative flex w-[30rem] flex-col px-10  items-center justify-center gap-10 border-2  border-t-0 border-red-gtext py-16 after:absolute after:-left-2 after:top-0 after:h-full after:w-[105%] after:bg-gradient-to-t after:from-transparent after:to-white">
+          <div className="grid grid-cols-1 gap-40 sm:grid-cols-2 md:grid-cols-3">
+            <div className=" relative flex w-[40rem] sm:w-[30rem] flex-col px-10  items-center justify-center gap-10 border-2  border-t-0 border-red-gtext py-16 after:absolute after:-left-2 after:top-0 after:h-full after:w-[105%] after:bg-gradient-to-t after:from-transparent after:to-white">
               <p className="z-10 px-6 text-center text-[2rem] font-bold">
                 Vision
               </p>
@@ -24,7 +24,7 @@ const OurIdentity: React.FC = () => {
                 To be the largest green and smart home developer in the world
               </p>
             </div>
-            <div className=" relative flex w-[30rem] flex-col px-10 items-center justify-center gap-10 border-2  border-t-0 border-red-gtext py-16 after:absolute after:-left-2 after:top-0 after:h-full after:w-[105%] after:bg-gradient-to-t after:from-transparent after:to-white">
+            <div className=" relative flex w-[40rem] sm:w-[30rem] flex-col px-10 items-center justify-center gap-10 border-2  border-t-0 border-red-gtext py-16 after:absolute after:-left-2 after:top-0 after:h-full after:w-[105%] after:bg-gradient-to-t after:from-transparent after:to-white">
               <p className="z-10 px-6 text-center text-[2rem] font-bold">
                 Mission
               </p>
@@ -34,7 +34,7 @@ const OurIdentity: React.FC = () => {
                 innovation and technology
               </p>
             </div>
-            <div className=" relative flex w-[30rem] flex-col px-10  items-center justify-center gap-10 border-2  border-t-0 border-red-gtext py-16 after:absolute after:-left-2 after:top-0 after:h-full after:w-[105%] after:bg-gradient-to-t after:from-transparent after:to-white">
+            <div className=" relative flex w-[40rem] sm:w-[30rem] flex-col px-10  items-center justify-center gap-10 border-2  border-t-0 border-red-gtext py-16 after:absolute after:-left-2 after:top-0 after:h-full after:w-[105%] after:bg-gradient-to-t after:from-transparent after:to-white">
               <p className="z-10 px-6 text-center text-[2rem] font-bold">
                 Goal
               </p>

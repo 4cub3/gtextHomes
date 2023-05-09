@@ -8,7 +8,7 @@ const SignUp:React.FC = (   ) => {
     <section className='px-10 my-40'>
         <Container>
             <div className='flex items-center justify-center'>
-        <article className='md:flex items-center gap-6'>
+        <article className=' space-y-8 md:space-y-0 xs:flex items-center gap-6'>
             <p className='font-serif text-3xl'>
             Sign Up to Book an Inspection
             </p>

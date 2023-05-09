@@ -8,7 +8,7 @@ const HeroText: React.FC = () => {
     <section className="absolute bottom-80 left-0 z-[600] w-full px-10">
       <article className="mx-auto max-w-[120rem]">
         <div className="sm:w-3/4 md:w-1/2  space-y-8">
-          <h1 className={`relative font-serif text-[60px] sm:text-[75.32px] font-medium leading-[6.1rem] text-white after:absolute after:-left-11 after:h-1/2 after:w-[full] after:border-l-4 before:absolute before:-left-10 before:top-0 before:h-full before:w-[full] before:border-l ${borderStyle} transition-all duration-500 `}>
+          <h1 className={`relative font-serif text-[60px] sm:text-[75.32px] font-medium leading-[8rem] text-white after:absolute after:-left-11 after:h-1/2 after:w-[full] after:border-l-4 before:absolute before:-left-10 before:top-0 before:h-full before:w-[full] before:border-l ${borderStyle} transition-all duration-500 `}>
             Find your next <span>Green </span> Home.
           </h1>
           <p className="font-sans text-[14px] sm:text-[20.8px] font-[300] leading-[2.9rem] text-white">

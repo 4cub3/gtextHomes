@@ -12,7 +12,7 @@
   @apply m-0 p-0 ;
 }
 html{
-  @apply sm:text-[62.5%] text-[50%];
+  @apply text-[62.5%];
 }
 body{
   @apply font-sans text-[1.6rem] bg-gradient-to-b from-[#F3FAFF] to-[rgba(243,250,255,0)];

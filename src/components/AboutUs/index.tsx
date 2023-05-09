@@ -9,7 +9,7 @@ const AboutUs: React.FC = () => {
   return (
     <section className="mt-80 px-10 overflow-hidden">
       <Container>
-        <div className="flex flex-col items-center gap-20 md:flex-row md:gap-60">
+        <div className="md:flex items-center gap-40 my-20 space-y-20 md:space-y-0">
           <article>
             <HeadText>About Us</HeadText>
             <ParagraphText>
@@ -38,7 +38,7 @@ const AboutUs: React.FC = () => {
                 Green
               </p>
             </div>
-            <SplitImage image={image} className=" flex-row-reverse" />
+            <SplitImage image={image} className="flex-row-reverse" />
           </div>
         </div>
       </Container>

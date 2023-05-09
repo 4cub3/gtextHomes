@@ -13,9 +13,9 @@ import {
 const FooterSocials: React.FC = () => {
   return (
     <section className="mt-40 justify-between space-y-28 sm:flex  sm:space-y-0">
-      <article className="space-y-10 text-white sm:w-2/5 ">
+      <article className=" text-white sm:w-2/5 ">
         <Title borderWhite={true}>About Us</Title>
-        <p className="my-8  text-[12px] font-light ">
+        <p className="my-10  text-[12px] font-light ">
           We are the pioneers of the green and smart estate program in Africa.
           Using the most advanced cutting-edge technology at our disposal.
         </p>
@@ -24,7 +24,7 @@ const FooterSocials: React.FC = () => {
         </Button>
       </article>
       <article className="flex flex-wrap items-center gap-20 self-start text-white">
-        <div>
+        <div className="w-full z-50">
           <Title borderWhite={true}>Our Social Handles</Title>
           <ul className="mt-14 flex gap-10">
             <a target="_blank" href="https://www.facebook.com">

@@ -50,11 +50,11 @@ const FeaturedCard: React.FC<FeaturedCardProps> = ({expand}) => {
           </li>
         </ul>
       </article>
-      <div className="">
-        <Button type="button" className="w-1/2  hover:bg-red-gtext text-red-gtext hover:text-white transition-all duration-300">
+      <div className="flex">
+        <Button type="button" className="w-1/2 px-24 hover:bg-red-gtext text-red-gtext hover:text-white transition-all duration-300">
           Explore
         </Button>
-        <Button primary={true} type="button" className="w-1/2 text-white hover:bg-red-gtext hover:text-white transition-all duration-300">
+        <Button primary={true} type="button" className="w-1/2 px-24 text-white hover:bg-red-gtext hover:text-white transition-all duration-300">
           Invest
         </Button>
       </div>

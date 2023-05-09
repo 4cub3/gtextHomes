@@ -12,12 +12,14 @@ const Gallery:React.FC = () => {
            
     ))
   return (
-    <section className='w-full overflow-hidden'>
+    <section className='w-full overflow-hidden mt-32'>
         <Container>
-        <article className='mb-10 px-10'>
+        <article className='mb-20 px-10 space-y-20'>
+          
         <Title>
             Gallery
         </Title>
+        
         <div className='flex justify-end w-full'>
         <button type='button' className='flex px-0 py-0 items-center gap-6'>
             See all <FaArrowRight />
@@ -25,7 +27,7 @@ const Gallery:React.FC = () => {
         </div>
         </article>
         </Container>
-        <div className='w-full overflow-x-scroll px-10 flex gap-10'>
+        <div className='w-full overflow-x-scroll px-10 flex gap-10 mb-60'>
            {gallery}
         </div>
     </section>
