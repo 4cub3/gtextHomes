@@ -1,13 +1,17 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Container from "../../../shared/Container/Container";
 import HeadText from "../../../shared/HeadText";
 import ParagraphText from "../../../shared/ParagraphText";
 import SplitImage from "../../../shared/SplitImage";
 import image from "../../../assets/galleryImages/etienne-beauregard-riverin-B0aCvAVSX8E-unsplash.jpg";
-
 const AboutUs: React.FC = () => {
+  useEffect(()=>{
+    window.scrollTo({top: 0, left:0 , behavior:"smooth"})
+  }, [])
   return (
     <section className="mt-32 md:mt-80 px-10 overflow-hidden">
+   
+
       <Container>
         <div className="md:flex items-center gap-40 my-20 space-y-20 md:space-y-0">
           <article>

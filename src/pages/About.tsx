@@ -1,23 +1,19 @@
-import React, { lazy, Suspense } from "react";
-import Loader from "../shared/Loader/Loader";
+import React from "react";
 import MeetTheTeam from "../components/About-components/MeetTheTeam";
-const AboutUs = lazy(() => import("../components/About-components/AboutUs"));
-const AboutWhyNot = lazy(() => import("../components/About-components/AboutWhyNot"));
-const OurMainLocation = lazy(() => import("../components/About-components/OurMainLocation"));
-const OurIdentity = lazy(() => import("../components/About-components/OurIdentity/index"));
+import AboutUs from "../components/About-components/AboutUs";
+import AboutWhyNot from "../components/About-components/AboutWhyNot";
+import OurMainLocation from "../components/About-components/OurMainLocation";
+import OurIdentity from "../components/About-components/OurIdentity";
+
 const About: React.FC = () => {
   return (
-    <Suspense
-      fallback={
-        <Loader />
-      }
-    >
+  <>
       <AboutUs />
       <AboutWhyNot />
       <OurMainLocation />
       <OurIdentity />
       <MeetTheTeam />
-    </Suspense>
+    </>
   );
 };
 

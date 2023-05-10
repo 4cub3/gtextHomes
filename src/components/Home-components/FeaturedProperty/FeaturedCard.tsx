@@ -3,10 +3,10 @@ import { DUMMY_PROPERTIES } from "./FeaturedCardData";
 import { FaMap } from "react-icons/fa";
 import Button from "../../../shared/Button/Button";
 interface FeaturedCardProps {
-  
+  className?: string;
 }
 
-const FeaturedCard: React.FC<FeaturedCardProps> = () => {
+const FeaturedCard: React.FC<FeaturedCardProps> = ({className = ''}) => {
   const cards = DUMMY_PROPERTIES.map((prop) => (
     <div
     
@@ -60,7 +60,7 @@ const FeaturedCard: React.FC<FeaturedCardProps> = () => {
       </div>
     </div>
   ));
-  return <div id="top" className={`w-full mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-32 py-6 transition-all duration-300 overflow-hidden  max-h-[140rem] overflow-y-scroll`}>{cards}</div>;
+  return <div id="top" className={`w-full mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-32 py-6 transition-all duration-300 overflow-hidden  max-h-[140rem]  ${className}`}>{cards}</div>;
 };
 
 export default FeaturedCard;

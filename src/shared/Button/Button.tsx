@@ -22,6 +22,8 @@ const Button: React.FC<ButtonProps> = ({
   children,
   link = '/home',
 }) => {
+
+
   return (
     <Link to={link}
       className={`px-16 py-5  ${secondary && "bg-red-gtext"} ${

@@ -63,7 +63,7 @@ const OurService: React.FC<ServiceProps> = ({}) => {
           </Button>
         </div>
       </div>
-      <div className="relative mb-20 mt-80 items-center justify-center gap-40 space-y-20 px-10 md:mt-60 md:flex md:justify-start md:space-y-0">
+      <div className="relative mb-20 mt-[30rem] items-center justify-center gap-40 space-y-20 px-10 md:mt-80 md:flex md:justify-start md:space-y-0">
         <SplitImage image={BigImage} />
         <article className="space-y-10">
           <Title>Our service</Title>

@@ -6,9 +6,7 @@ const Loader: React.FC = () => {
     <div className=" my-60">
       <Container>
         <div className="flex items-center justify-center gap-4 py-2">
-          <div className="h-6 w-6 animate-pulse rounded-full  bg-red-gtext"></div>
-          <div className="h-6 w-6 animate-pulse rounded-full bg-red-gtext"></div>
-          <div className="h-6 w-6 animate-pulse rounded-full bg-red-gtext"></div>
+          <div className=" w-20 h-20  rounded-full border-t-2 border-t-blue-gtext animate-spin"></div>
         </div>
       </Container>
     </div>

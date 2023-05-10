@@ -30,7 +30,7 @@ const NavBar: React.FC = () => {
     return (
       <li key={idx}>
         <Link
-          to={`/${link.trim().replace(/ /g, "").toLowerCase()}`}
+          to={`/${lowerCasePage}`}
           className={`p-4 transition-all duration-200 hover:border-b-2 ${
             page === lowerCasePage && "border-b-2 border-black"
           } ${
