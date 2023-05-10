@@ -1,5 +1,6 @@
 import React, { lazy, Suspense } from "react";
 import Loader from "../shared/Loader/Loader";
+import MeetTheTeam from "../components/MeetTheTeam";
 const AboutUs = lazy(() => import("../components/AboutUs"));
 const AboutWhyNot = lazy(() => import("../components/AboutWhyNot"));
 const OurMainLocation = lazy(() => import("../components/OurMainLocation"));
@@ -15,6 +16,7 @@ const About: React.FC = () => {
       <AboutWhyNot />
       <OurMainLocation />
       <OurIdentity />
+      <MeetTheTeam />
     </Suspense>
   );
 };

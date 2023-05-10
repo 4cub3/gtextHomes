@@ -14,7 +14,7 @@ const PortFolio: React.FC = () => {
         </Title>
         </div>
         <div className="grid grid-cols-1 gap-16 sm:grid-cols-2">
-          <figure className="grid grid-cols-4">
+          <figure className="grid grid-cols-4 gap-8">
             {PORTFOLIO_DATA.map(itm =>(
                 <img src={itm.icon} alt="estate-logo" key={itm.id} />
             ))}

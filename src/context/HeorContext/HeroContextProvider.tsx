@@ -38,7 +38,7 @@ const HeroContextProvider: React.FC<HeroContextProps> = ({ children }) => {
   const values = {
     imageOne,
     image,
-    border
+    border,
   };
   return <HeroContext.Provider value={values}>{children}</HeroContext.Provider>;
 };

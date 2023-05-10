@@ -1,8 +1,7 @@
 import React, { useContext, useState, useEffect } from "react";
 import logo from "../../assets/images/gtext-white-logo.0e49f14.png";
 import { NavBarContext } from "../../context/NavbarContext/navBarContext";
-import { Link } from "react-router-dom";
-import { useMatch } from "react-router-dom";
+import { Link, useMatch } from "react-router-dom";
 import useMediaQuery from "../../hooks/mediaQuery";
 import { Bars2Icon, XMarkIcon } from "@heroicons/react/24/solid";
 const NavBar: React.FC = () => {
