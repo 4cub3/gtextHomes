@@ -2,14 +2,16 @@ import React from 'react'
 
 interface TeamImageProps {
     image: string;
+    className?: string;
+    width?: boolean;
 }
 
 
-const TeamImage:React.FC<TeamImageProps> = ({image}) => {
+const TeamImage:React.FC<TeamImageProps> = ({image ,className = '', width}) => {
   return (
-    <div className='max-w-[30rem] max-h-[25rem] h-[30rem]  rounded-tr-[5rem] bg-blue-10 relative'>
-            <figure className='w-[40rem] max-w-[30rem] absolute bottom-0 left-1/2 -translate-x-1/2'>
-                <img src={image} alt="team" />
+    <div className={` h-[30rem] mt-60 rounded-tr-[5rem] bg-blue-10 relative ${width ? 'w-[30rem] h-[20.8rem]' : "w-[30rem]"}`} >
+            <figure className={`w-[28rem] absolute bottom-0 left-0 ${className} `}>
+                <img src={image} alt="team"  className='w-full h-full'/>
             </figure>
     </div>
   )
