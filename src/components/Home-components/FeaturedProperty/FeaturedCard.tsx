@@ -60,7 +60,7 @@ const FeaturedCard: React.FC<FeaturedCardProps> = ({className = ''}) => {
       </div>
     </div>
   ));
-  return <div id="top" className={`w-full mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-32 py-6 transition-all duration-300 overflow-hidden  max-h-[140rem]  ${className}`}>{cards}</div>;
+  return <div id="top" className={`w-full mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-32 py-40 transition-all duration-300 overflow-hidden  max-h-[140rem]  ${className}`}>{cards}</div>;
 };
 
 export default FeaturedCard;

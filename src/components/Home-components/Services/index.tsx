@@ -14,7 +14,7 @@ const OurService: React.FC<ServiceProps> = ({}) => {
     <Container>
       <div
         id="service"
-        className="absolute -top-40 left-0 z-[700] mx-10 w-[92%] overflow-hidden drop-shadow-xl sm:w-[70%] md:mx-0"
+        className="absolute -top-40 left-0 z-[700] mx-6 w-[92%] overflow-hidden drop-shadow-xl sm:w-[70%] md:mx-0"
       >
         <div className="w-full">
           <Button

@@ -14,7 +14,7 @@ import {
 const FooterSocials: React.FC = () => {
   const { selectHandler } = useContext(NavBarContext);
   return (
-    <section className="mt-40 justify-between space-y-28 sm:flex  sm:space-y-0">
+    <section className="mt-40 z-50 justify-between space-y-28 sm:flex  sm:space-y-0">
       <article className=" text-white sm:w-2/5 ">
         <Title borderWhite={true}>About Us</Title>
         <p className="my-10  text-[12px] font-light ">
@@ -35,7 +35,7 @@ const FooterSocials: React.FC = () => {
         </Button>
       </article>
       <article className="flex flex-wrap items-center gap-20 self-start text-white">
-        <div className="z-50 w-full">
+        <div className=" w-full">
           <Title borderWhite={true}>Our Social Handles</Title>
           <ul className="mt-14 flex gap-10">
             <a target="_blank" href="https://www.facebook.com">
