@@ -7,7 +7,8 @@ import Footer from "./components/Footer/Footer";
 const Home = lazy(() => import("./pages/Home"));
 const About = lazy(() => import("./pages/About"));
 const Portfolio = lazy(() => import("./pages/Portfolio"));
-
+const VisitUs = lazy(() => import("./pages/Visit"));
+const ContactUs = lazy(() => import("./pages/Contact"));
 function App() {
   const match = useMatch("/");
   const navigate = useNavigate();
@@ -24,11 +25,13 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/aboutus" element={<About />} />
           <Route path="/ourportfolio" element={<Portfolio />} />
+          <Route path="/visitus" element={<VisitUs />} />
+          <Route path="/contactus" element={<ContactUs />} />
           <Route
             path="*"
             element={
-              <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-                Not found
+              <div className="w-full flex items-center justify-center  h-screen text-black">
+              Page  Not found
               </div>
             }
           />

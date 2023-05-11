@@ -7,6 +7,8 @@ import RoundText from "../../../assets/icons/gsl.svg";
 import SplitImage from "../../../shared/SplitImage";
 import BigImage from "../../../assets/images/Living-room3.jpg";
 import Button from "../../../shared/Button/Button";
+import { motion } from "framer-motion";
+
 interface ServiceProps {}
 
 const OurService: React.FC<ServiceProps> = ({}) => {
@@ -63,7 +65,15 @@ const OurService: React.FC<ServiceProps> = ({}) => {
           </Button>
         </div>
       </div>
-      <div className="relative mb-20 mt-[30rem] items-center justify-center gap-40 space-y-20 px-10 md:mt-80 md:flex md:justify-start md:space-y-0">
+      <motion.div className="relative mb-20 mt-[30rem] items-center justify-center gap-40 space-y-20 px-10 md:mt-80 md:flex md:justify-start md:space-y-0"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.5 }}
+      transition={{ duration: 0.5 }}
+      variants={{
+        hidden: { opacity: 0, x: -50 },
+        visible: { opacity: 1, x: 0 },
+      }}>
         <SplitImage image={BigImage} />
         <article className="space-y-10">
           <Title>Our service</Title>
@@ -83,7 +93,7 @@ const OurService: React.FC<ServiceProps> = ({}) => {
             Using the most advanced cutting-edge technology at our disposal.
           </ParagraphText>
         </article>
-      </div>
+      </motion.div>
     </Container>
   );
 };

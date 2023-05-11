@@ -4,16 +4,25 @@ import HeadText from "../../../shared/HeadText";
 import ParagraphText from "../../../shared/ParagraphText";
 import SplitImage from "../../../shared/SplitImage";
 import image from "../../../assets/galleryImages/etienne-beauregard-riverin-B0aCvAVSX8E-unsplash.jpg";
+import {motion} from 'framer-motion'
 const AboutUs: React.FC = () => {
   useEffect(()=>{
     window.scrollTo({top: 0, left:0 , behavior:"smooth"})
   }, [])
   return (
-    <section className="mt-32 md:mt-80 px-10 overflow-hidden">
+    <section className="mt-20 px-10 overflow-hidden">
    
 
       <Container>
-        <div className="md:flex items-center gap-40 my-20 space-y-20 md:space-y-0">
+        <motion.div className="md:flex items-center gap-40 my-20 space-y-20 md:space-y-0"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.5 }}
+        variants={{
+          hidden: { opacity: 0, x: -50 },
+          visible: { opacity: 1, x: 0 },
+        }}>
           <article>
             <HeadText>About Us</HeadText>
             <ParagraphText>
@@ -44,7 +53,7 @@ const AboutUs: React.FC = () => {
             </div>
             <SplitImage image={image} className="flex-row-reverse" />
           </div>
-        </div>
+        </motion.div>
       </Container>
     </section>
   );

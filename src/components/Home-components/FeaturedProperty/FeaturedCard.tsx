@@ -2,16 +2,27 @@ import React from "react";
 import { DUMMY_PROPERTIES } from "./FeaturedCardData";
 import { FaMap } from "react-icons/fa";
 import Button from "../../../shared/Button/Button";
+import { motion } from "framer-motion";
 interface FeaturedCardProps {
   className?: string;
 }
 
-const FeaturedCard: React.FC<FeaturedCardProps> = ({className = ''}) => {
+const FeaturedCard: React.FC<FeaturedCardProps> = ({ className = "" }) => {
+  const container = {
+    hidden: {},
+    visible: {
+      transition: { staggerChildren: 0.2 },
+    },
+  };
+  const childVariant = {
+    hidden: {opacity: 0, scale:0.9},
+    visible: {opacity: 1, scale:1},
+}
   const cards = DUMMY_PROPERTIES.map((prop) => (
-    <div
-    
+    <motion.div
       key={prop.id}
-      className="h-[50rem]  flex flex-col justify-between overflow-hidden rounded-lg bg-white drop-shadow-xl"
+      className="flex  h-[50rem] flex-col justify-between overflow-hidden rounded-lg bg-white drop-shadow-xl"
+      variants={childVariant}
     >
       <figure className="h-[55%] w-full overflow-hidden">
         <img
@@ -24,7 +35,7 @@ const FeaturedCard: React.FC<FeaturedCardProps> = ({className = ''}) => {
         <h3 className="text-[25px] font-bold leading-7">
           {prop.propertyTitle}
         </h3>
-        <address className="flex items-center gap-4 text-gray-600 capitalize ">
+        <address className="flex items-center gap-4 capitalize text-gray-600 ">
           <FaMap /> {prop.propertyLocation}
         </address>
         <ul>
@@ -51,16 +62,34 @@ const FeaturedCard: React.FC<FeaturedCardProps> = ({className = ''}) => {
         </ul>
       </article>
       <div className="flex">
-        <Button type="button" className="w-1/2 px-24 hover:bg-red-gtext text-red-gtext hover:text-white transition-all duration-300">
+        <Button
+          type="button"
+          className="w-1/2 px-24 text-red-gtext transition-all duration-300 hover:bg-red-gtext hover:text-white"
+        >
           Explore
         </Button>
-        <Button primary={true} type="button" className="w-1/2 px-24 text-white hover:bg-red-gtext hover:text-white transition-all duration-300">
+        <Button
+          primary={true}
+          type="button"
+          className="w-1/2 px-24 text-white transition-all duration-300 hover:bg-red-gtext hover:text-white"
+        >
           Invest
         </Button>
       </div>
-    </div>
+    </motion.div>
   ));
-  return <div id="top" className={`w-full mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-32 py-40 transition-all duration-300 overflow-hidden  max-h-[140rem]  ${className}`}>{cards}</div>;
+  return (
+    <motion.div
+      id="top"
+      className={`mt-8 grid max-h-[140rem] w-full grid-cols-1 gap-32 overflow-hidden py-40 transition-all duration-300 sm:grid-cols-2 md:grid-cols-3  md:py-12  ${className}`}
+      initial="hidden"
+      whileInView="visible"
+      // viewport={{ once: true, amount: 0.5  }}
+      variants={container}
+    >
+      {cards}
+    </motion.div>
+  );
 };
 
 export default FeaturedCard;

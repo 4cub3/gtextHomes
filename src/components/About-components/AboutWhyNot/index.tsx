@@ -4,12 +4,20 @@ import SplitImage from "../../../shared/SplitImage";
 import image from "../../../assets/galleryImages/trinity-nguyen-xQhqS7OWEqE-unsplash.jpg";
 import HeadText from "../../../shared/HeadText";
 import ParagraphText from "../../../shared/ParagraphText";
-
+import {motion} from 'framer-motion';
 const AboutWhyNot: React.FC = () => {
   return (
     <section className="mt-40  px-10">
       <Container>
-        <div className="items-center flex flex-col md:flex-row gap-20">
+        <motion.div className="items-center flex flex-col md:flex-row gap-20"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.5 }}
+        variants={{
+          hidden: { opacity: 0, x: 50 },
+          visible: { opacity: 1, x: 0 },
+        }}>
           <div className="order-1 md:-order-1">
             <SplitImage image={image} />
           </div>
@@ -29,7 +37,7 @@ const AboutWhyNot: React.FC = () => {
               will tailor our services to suit your individual needs.
             </ParagraphText>
           </article>
-        </div>
+        </motion.div>
       </Container>
     </section>
   );

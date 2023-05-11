@@ -43,6 +43,10 @@ const NavBar: React.FC = () => {
 
           onClick={() => {
             selectHandler(lowerCasePage);
+
+            if(!isAboveMediumScreen){
+              setIsNav(prev => !prev)
+            }
           }}
         >
           {link}

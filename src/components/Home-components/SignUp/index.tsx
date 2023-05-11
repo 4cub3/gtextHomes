@@ -12,7 +12,7 @@ const SignUp:React.FC = (   ) => {
             <p className='font-serif text-3xl'>
             Sign Up to Book an Inspection
             </p>
-            <Button type='button' secondary={true} className='flex items-center text-white gap-20'>
+            <Button type='button' secondary={true} className='flex items-center text-white gap-20' link='/visitus'>
                 Sign Up 
                  <img src={Arrow} className='-rotate-90 brightness-0 invert h-20 w-20' />
             </Button>

@@ -5,12 +5,20 @@ import SplitImage from "../../../shared/SplitImage";
 import HeadText from "../../../shared/HeadText";
 import ParagraphText from "../../../shared/ParagraphText";
 import image from '../../../assets/galleryImages/jacques-bopp-Hh18POSx5qk-unsplash.jpg';
-
+import {motion} from 'framer-motion'
 const OurPortfolio: React.FC = () => {
   return (
-    <section className="mt-60 px-10">
+    <section className="mt-20 px-10">
       <Container>
-        <div className="gap-40 md:flex items-center">
+        <motion.div className="gap-40 md:flex items-center"
+         initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.5 }}
+          variants={{
+            hidden: { opacity: 0, x: -50 },
+            visible: { opacity: 1, x: 0 },
+          }}>
           <article>
             <Title>Join us in building your smart future</Title>
 
@@ -34,7 +42,7 @@ const OurPortfolio: React.FC = () => {
           <div>
             <SplitImage image={image} className="flex-row-reverse" />
           </div>
-        </div>
+        </motion.div>
       </Container>
     </section>
   );

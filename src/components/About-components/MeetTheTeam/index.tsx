@@ -3,9 +3,20 @@ import Container from "../../../shared/Container/Container";
 import TeamImage from "../../../shared/TeamImage";
 import image from "../../../assets/teams/dsa.png";
 import HeadText from "../../../shared/HeadText";
+import {motion } from 'framer-motion';
 interface MeetTheTeamProps {}
 
 const MeetTheTeam: React.FC<MeetTheTeamProps> = () => {
+  const container = {
+    hidden: {},
+    visible: {
+      transition: { staggerChildren: 0.2 },
+    },
+  };
+  const childVariant = {
+    hidden: {opacity: 0, scale:0.9},
+    visible: {opacity: 1, scale:1},
+}
   return (
     <section className="mt-60 px-10">
       <Container>
@@ -34,29 +45,33 @@ const MeetTheTeam: React.FC<MeetTheTeamProps> = () => {
               </p>
             </div>
           </div>
-          <div className="mx-auto mt-60 grid grid-cols-1 gap-32 sm:grid-cols-2  md:grid-cols-3">
-            <div className="w-[30rem]">
+          <motion.div className="mx-auto mt-60 grid grid-cols-1 gap-32 sm:grid-cols-2  md:grid-cols-3"
+         initial="hidden"
+         whileInView="visible"
+        //  viewport={{ once: true, amount: 0.5 }}
+         variants={container}>
+            <motion.div className="w-[30rem]" variants={childVariant}>
               <TeamImage image={image} className="w-[24rem]" width={true} />
               <article className="mt-20 rounded-lg p-8 text-center shadow-lg">
                 <p className="text-[2rem] font-bold">Mr. Michael Raj</p>
                 <p>CPO</p>
               </article>
-            </div>
-            <div className="w-[30rem]">
+            </motion.div>
+            <motion.div className="w-[30rem]" variants={childVariant}>
               <TeamImage image={image} className="w-[24rem]" width={true} />
               <article className="mt-20 rounded-lg p-8 text-center shadow-lg">
                 <p className="text-[2rem] font-bold">Mr. Michael Raj</p>
                 <p>CPO</p>
               </article>
-            </div>
-            <div className="w-[30rem]">
+            </motion.div>
+            <motion.div className="w-[30rem]" variants={childVariant}>
               <TeamImage image={image} className="w-[24rem]" width={true} />
               <article className="mt-20 rounded-lg p-8 text-center shadow-lg">
                 <p className="text-[2rem] font-bold">Mr. Michael Raj</p>
                 <p>CPO</p>
               </article>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
       </Container>
     </section>
