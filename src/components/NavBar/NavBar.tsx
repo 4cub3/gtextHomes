@@ -53,7 +53,7 @@ const NavBar: React.FC = () => {
   return (
     <>
       <nav
-        className="absolute top-0 z-[999] w-full overflow-hidden px-10 py-8"
+        className={`absolute top-0 z-[999] w-full overflow-hidden px-10 py-8 ${matches?.pathname === '/home'? '': 'relative'}`}
         id="home"
       >
         <div className="mx-auto flex max-w-[1200px] items-center justify-between">
